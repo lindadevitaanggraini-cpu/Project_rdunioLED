@@ -1,11 +1,11 @@
 int led_merah = 2;
 int led_kuning = 4;
-
+int led_hijau = 6;
 
 void setup() {
  pinMode(led_merah, OUTPUT);
  pinMode(led_kuning, OUTPUT);
-
+ pinMode(led_hijau, OUTPUT);
 
  serial.begin(19200);
 }
@@ -29,7 +29,9 @@ void loop() {
 
 
     //3= hijau menyala
-
+    else if (perintah == '3'){
+        digitalWrite(led_hijau, HIGH);
+    }
 
 
 
@@ -39,13 +41,14 @@ void loop() {
 
 
    digitalWrite(led_kuning, LOW);
-
+   digitalWrite(led_hijau, LOW);
 
 
 
 
    //5= semua nyala
   }
+  
   digitalWrite(led_kuning, HIGH);
-
+  digitalWrite(led_hijau, HIGH);
 }
