@@ -33,10 +33,14 @@ void loop() {
    //4= semua mati
    else if (perintah == '4'){
    digitalWrite(led_merah, LOW);
+
+   digitalWrite(led_hijau, LOW);
   
    //5= semua nyala
    else if (perintah == '5'){
    digitalWrite(led_merah, HIGH);
+
+   digitalWrite(led_hijau, HIGH);
   
   }
 }
